@@ -2,7 +2,14 @@
 {
     internal class Program
     {
-        static double Probability_founder(int[] squad_1, int[] squad_2)
+        static void Squad_power(int[] a)
+        {
+            for (int i = 0; i < a.Length; i++)
+            {
+                a[i] = rand_roll.Next(30, 100);
+            }
+        }
+                static double Probability_founder(int[] squad_1, int[] squad_2)
         {
             double squad_chance = 0;
             int squad_1_power = 0;
@@ -15,16 +22,16 @@
             squad_chance = squad_1_power / (squad_1_power + squad_2_power) * 100;
             return squad_chance;
         }
-        new Random rand_roll = new Random(); 
+        static Random rand_roll = new Random();
         static void Main(string[] args)
         {
             bool penalty_given = false;
-            int manchester_goals = 0, manchester_chance = 0, arsenal_goals = 0, arsenal_chance = 0, event_decider = 0, manchester_yellows = 0, manchester_reds = 0, penalty_decider = 0;
+            int manchester_goals = 0, arsenal_goals = 0, event_decider = 0, manchester_yellows = 0, manchester_reds = 0, penalty_decider = 0;
             int[] manchester_main = new int[11];
             int[] manchester_spare = new int[5];
             int[] arsenal_main = new int[11];
             int[] arsenal_spare = new int[5];
-
+            double manchester_chance = 0, arsenal_chance=0;
             Squad_power(manchester_main);
             Squad_power(manchester_spare);
             Squad_power(arsenal_main);
@@ -35,7 +42,8 @@
                 {
                     if (event_decider == 1)
                     {
-                       
+                        manchester_chance = Probability_founder(manchester_main, arsenal_main);
+                        arsenal_chance = Probability_founder(arsenal_main, manchester_main);
                     }
                     else if (event_decider == 2)
                     {
