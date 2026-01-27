@@ -28,6 +28,7 @@
             bool penalty_given = false;
             int manchester_goals = 0, arsenal_goals = 0, event_decider = 0, manchester_yellows = 0, manchester_reds = 0, penalty_decider = 0;
             int[] manchester_main = new int[11];
+            bool[] manchester_yellow = new bool[11];
             int[] manchester_spare = new int[5];
             int[] arsenal_main = new int[11];
             int[] arsenal_spare = new int[5];
@@ -44,30 +45,19 @@
                     {
                         manchester_chance = Probability_founder(manchester_main, arsenal_main);
                         arsenal_chance = Probability_founder(arsenal_main, manchester_main);
+
+                        if (rand_roll.Next(1, 100) > manchester_chance) {
+                            manchester_goals++;
+                            Console.WriteLine("manchester has scored");
+                        }
+                        if (rand_roll.Next(1, 100) > arsenal_chance) {
+                            arsenal_goals++;
+                            Console.WriteLine("arsenal has scored");
+                        }
                     }
                     else if (event_decider == 2)
                     {
-                        while (penalty_given == false)
-                        {
-
-                            penalty_decider = rand_roll.Next(1, 7);
-                            manchester_yellows++;
-
-                            if (manchester_main[penalty_decider] >= 5)
-                            {
-                                manchester_main[penalty_decider] -= 5;
-                                penalty_given = true;
-                            }
-                            else if (manchester_main[penalty_decider] <= 5 && manchester_main[penalty_decider] > 0)
-                            {
-                                manchester_main[penalty_decider] = 0;
-                                penalty_given = true;
-                            }
-
-
-                        }
-                        penalty_given = false;
-
+                        
                     }
                     else if (event_decider == 3)
                     {
