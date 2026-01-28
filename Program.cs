@@ -27,16 +27,15 @@
         {
             bool penalty_given = false;
             int manchester_goals = 0, arsenal_goals = 0, event_decider = 0, manchester_yellows = 0, manchester_reds = 0, penalty_decider = 0;
-            int[] manchester_main = new int[11];
-            bool[] manchester_yellow = new bool[11];
-            int[] manchester_spare = new int[5];
-            int[] arsenal_main = new int[11];
-            int[] arsenal_spare = new int[5];
+            int[] manchester_main = new int[16];
+            bool[] manchester_yellow = new bool[16];            
+            int[] arsenal_main = new int[16];
+            bool[] arsenal_yellow = new bool[16];
             double manchester_chance = 0, arsenal_chance=0;
             Squad_power(manchester_main);
-            Squad_power(manchester_spare);
+          
             Squad_power(arsenal_main);
-            Squad_power(arsenal_spare);
+           
             for (int i = 0; i < 90; i++)
             {
                 event_decider = rand_roll.Next(1, 7);
