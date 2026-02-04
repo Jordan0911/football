@@ -81,10 +81,10 @@ namespace football;
                 }
                 else if (event_decider == 2)
                 {
-                    // 1. Pick the player index ONCE for this event
+                   
                     penalty_decider = rand_roll.Next(0, 11); 
 
-                    // 2. Decide which team committed the foul (50/50)
+                    
                     if (rand_roll.Next(0, 100) <= 50)
                     {
                         if (manchester_yellow[penalty_decider])
@@ -277,11 +277,11 @@ namespace football;
         Console.WriteLine("           FINAL WHISTLE");
         Console.WriteLine(========================================);
         
-        // Final Score Display
+ 
         Console.WriteLine($"MANCHESTER {manchester_goals} - {arsenal_goals} ARSENAL");
      Console.WriteLine("----------------------------------------");
 
-        // Winner Logic using existing goal variables
+        
         if (manchester_goals > arsenal_goals)
         {
             Console.WriteLine("RESULT: Manchester United takes the win!");
@@ -295,7 +295,7 @@ namespace football;
             Console.WriteLine("RESULT: The points are shared in a draw!");
         }
 
-        // Stats display using existing sub and time variables
+   
         Console.WriteLine("----------------------------------------");
         Console.WriteLine($"Match Duration: {time} minutes");
         Console.WriteLine($"Subs Used: MAN {manchester_subs} | ARS {arsenal_subs}");
