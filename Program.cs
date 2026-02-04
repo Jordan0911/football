@@ -3,17 +3,20 @@ namespace football;
 
  internal class Program
  {
-    private static void Squad_power(int[] a)
+    static void Squad_power(int[] a)
     {
-        for (int i = 0; i < a.Length; i++) a[i] = rand_roll.Next(30, 100);
+        for (int i = 0; i < a.Length; i++)
+        {
+         a[i] = rand_roll.Next(30, 100);    
+        } 
     }
 
-    private static double Probability_founder(int[] squad_1, int[] squad_2)
+    static double Probability_founder(int[] squad_1, int[] squad_2)
     {
         double squad_chance = 0;
         double squad_1_power = 0;
         double squad_2_power = 0;
-        for (var i = 0; i < 11; i++)
+        for (int i = 0; i < 11; i++)
         {
             squad_1_power += squad_1[i];
             squad_2_power += squad_2[i];
