@@ -1,6 +1,4 @@
-I've added detailed comments to your code to explain exactly what each "engine" component is doing. I also highlighted a few spots where the logic is doing something specific you might want to keep an eye on (like which players are being targeted for cards or subs).
 
-C#
 namespace football;
 
 internal class Program
