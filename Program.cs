@@ -5,7 +5,7 @@ namespace football;
  {
     private static void Squad_power(int[] a)
     {
-        for (var i = 0; i < a.Length; i++) a[i] = rand_roll.Next(30, 100);
+        for (int i = 0; i < a.Length; i++) a[i] = rand_roll.Next(30, 100);
     }
 
     private static double Probability_founder(int[] squad_1, int[] squad_2)
@@ -23,9 +23,9 @@ namespace football;
         return squad_chance;
     }
 
-    private static  Random rand_roll = new();
+    Random rand_roll = new();
 
-    private static void Main(string[] args)
+     static void Main(string[] args)
     {
         int manchester_goals = 0,
             arsenal_goals = 0,
@@ -206,7 +206,7 @@ namespace football;
                                 }
 
 
-                            for (var t = 12; t < 16; t++)
+                            for (int = 12; t < 16; t++)
                                 if (arsenal_main[t] > biggest_reserve)
                                 {
                                     biggest_reserve = arsenal_main[t];
