@@ -104,7 +104,7 @@ namespace football;
                             Console.WriteLine($"[YELLOW] Manchester #{penalty_decider} at minute {i}");
                         }
                     }
-                    else // Arsenal foul
+                    else 
                     {
                         if (arsenal_yellow[penalty_decider])
                         {
@@ -128,10 +128,10 @@ namespace football;
                 {
                     penalty_decider = rand_roll.Next(1, 12);
     
-                    // 1. Decide which team committed the foul FIRST
+                   
                     if (rand_roll.Next(0, 100) <= 50)
                     {
-                        // 2. Only apply the red if the Manchester player is still on the pitch
+            
                         if (manchester_main[penalty_decider] > 0)
                         {
                             manchester_main[penalty_decider] = 0;
@@ -141,7 +141,7 @@ namespace football;
                     }
                     else
                     {
-                        // 3. Independent check for Arsenal
+                       
                         if (arsenal_main[penalty_decider] > 0)
                         {
                             arsenal_main[penalty_decider] = 0;
