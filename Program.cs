@@ -116,7 +116,7 @@ internal class Program
                             {
                                 manchester_main[penalty_decider] = 0; // Remove player from power sum
                                 manchester_reds++;
-                                Console.WriteLine($"[RED] Manchester #{penalty_decider} second yellow at minute {i}");
+                                Console.WriteLine($"[RED] Manchester player number {penalty_decider}gets a second yellow at minute {i}");
                             }
                         }
                         else if (manchester_main[penalty_decider] > 0)
