@@ -65,7 +65,7 @@ internal class Program
                 }
             }
 
-            event_decider = rand_roll.Next(1, 8);
+            event_decider = rand_roll.Next(0, 8);
             {
                 if (event_decider == 1)
                 {
