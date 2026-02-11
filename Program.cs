@@ -204,7 +204,7 @@ internal class Program
                             strongestReserveIndex = 12;
 
 
-                            for (var t = 1; t <= 11; t++)
+                            for (int t = 1; t <= 11; t++)
                                 if (arsenal_main[t] < smallest_main && arsenal_main[t] > 0)
                                 {
                                     smallest_main = arsenal_main[t];
