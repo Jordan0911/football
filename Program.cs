@@ -65,7 +65,7 @@ internal class Program
         Squad_power(manchester_main);
         Squad_power(arsenal_main);
         
-        // Adds 1-5 minutes of "stoppage time"
+        // Adds 1-5 minutes of "overtime"
         time += rand_roll.Next(1, 6);
 
         // --- MATCH SIMULATION LOOP (Minute by Minute) ---
